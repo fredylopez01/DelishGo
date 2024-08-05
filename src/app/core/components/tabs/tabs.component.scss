@@ -1,0 +1,23 @@
+#menu{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    background-color: #85db5b;
+    height: 70px;
+}
+.item{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg{
+        display: block;
+        margin: auto;
+        transition: 200ms ease-in-out;
+    }
+    transition: 200ms ease-in-out;
+}
+.selected{
+    background-color: #09d486;
+}
