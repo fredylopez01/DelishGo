@@ -8,12 +8,11 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class TabsComponent {
   status = [false, false, false, false];
-  activeColor = "#000";
+  activeColor = "#FFF10A";
   disabledColor = "#555";
 
   constructor(private router: Router){
     this.router.events.subscribe(event => {
-      console.log(event)
       if(event instanceof NavigationEnd){
         switch (event.urlAfterRedirects){
           case "/":
