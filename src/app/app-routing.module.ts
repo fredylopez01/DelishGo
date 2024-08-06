@@ -25,7 +25,7 @@ const routes: Routes = [
     component: SearchComponent
   },
   {
-    path: "section",
+    path: "category/:id",
     component: SectionComponent
   },
   {
