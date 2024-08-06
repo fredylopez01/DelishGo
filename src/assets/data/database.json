@@ -1,0 +1,215 @@
+[
+    {
+      "id": 1,
+      "name": "Pizzas",
+      "photoUrl": "https://www.laespanolaaceites.com/wp-content/uploads/2019/06/pizza-con-chorizo-jamon-y-queso-1080x671.jpg",
+      "products": [
+        {
+          "id": "7",
+          "name":"Pizza común",
+          "price": 1000,
+          "isVegan":false,
+          "isCeliac":false,
+          "ingredients": ["Muzarella","Aceitunas","Orégano"],
+          "photoUrl": "https://caserissimo.com/wp-content/uploads/2015/08/pizabuaur1-1024x768.jpg"
+        },
+        {
+          "id": "8",
+          "name":"Pizza especial",
+          "price": 1200,
+          "isVegan":false,
+          "isCeliac":false,
+          "ingredients": ["Muzarella","Aceitunas","Morrones","Tomate","Huevo"],
+          "photoUrl": "https://images-gmi-pmc.edge-generalmills.com/fce31bdd-1931-4f30-adef-a5bac0864676.jpg"
+        },
+        {
+          "id": "9",
+          "name":"Pizza 4 quesos",
+          "price": 1300,
+          "isVegan":false,
+          "isCeliac":false,
+          "ingredients": ["Muzarella","Roquefort","Provolone","Parmesano"],
+          "photoUrl": "https://www.gourmet.cl/wp-content/uploads/2017/04/pizza-570x458.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Hamburguesas",
+      "photoUrl": "https://img.freepik.com/vector-gratis/hamburguesa-realista-sobre-fondo-pizarra_79603-1042.jpg?w=2000",
+      "products": [
+        {
+          "id": "1",
+          "name":"Hamburguesa con queso",
+          "price": 1000,
+          "isVegan":false,
+          "isCeliac":false,
+          "ingredients": ["Carne de ternera","Pan Brioche","Queso"],
+          "photoUrl": "https://quem.com.ar/tienda/wp-content/uploads/2020/12/Grandwich_17-10_-061.jpg"
+        },
+        {
+          "id": "2",
+          "name":"Hamburguesa especial",
+          "price": 1500,
+          "isVegan":false,
+          "isCeliac":false,
+          "ingredients": ["Carne de ternera","Pan Brioche","Queso", "Tomate", "Lechuga"],
+          "photoUrl": "https://elsheriffburger.com/uploads/lh90_elsheriffbuger/products/54/es/img-H.-Especial-5-WEB-de-taman%CC%83o-mediano.jpg"
+        },
+        {
+          "id": "3",
+          "name":"Hamburguesa vegana",
+          "price": 1300,
+          "isVegan":true,
+          "isCeliac":false,
+          "ingredients": ["Medallón a base de lentejas","Pan Brioche","Tomate"],
+          "photoUrl": "https://www.pequerecetas.com/wp-content/uploads/2009/04/hamburguesa-de-garbanzos-casera-receta.jpg"
+        },
+        {
+          "id": "4",
+          "name":"Hamburguesa celíaca",
+          "price": 1250,
+          "isVegan":false,
+          "isCeliac":true,
+          "ingredients": ["Carne de ternera","Pan libre de tacc","Queso"],
+          "photoUrl": "https://www.perez-h.com/newsite/wp-content/uploads/2016/06/queso-2.jpg"
+        },
+        {
+          "id": "5",
+          "name":"Hamburguesa americana",
+          "price": 3500,
+          "isVegan":false,
+          "isCeliac":false,
+          "ingredients": ["Carne de ternera","Pan Brioche","Queso","Salsa secreta BBQ", "Panceta"],
+          "photoUrl": "https://www.clarin.com/img/2022/05/27/0HXb0UR0v_2000x1500__1.jpg"
+        },
+        {
+          "id": "6",
+          "name":"Medallón platero",
+          "price": 2000,
+          "isVegan":true,
+          "isCeliac":true,
+          "ingredients": ["Medallón a base de lentejas","Tomate","Lechuga"],
+          "photoUrl": "https://canalcocina.es/medias/images/1010_Coc_RecetasDeAnnie_HamburguesaQueso.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Postres",
+      "photoUrl": "https://www.recetasnestle.com.ar/sites/default/files/2023-03/postre-en-vaso-dulce-leche.jpg.jpg",
+      "products": [
+        {
+          "id": "10",
+          "name":"Tiramisú",
+          "price": 800,
+          "isVegan":false,
+          "isCeliac":true,
+          "ingredients": [],
+          "photoUrl": "https://i.blogs.es/410470/vasitos/1366_2000.jpeg"
+        },
+        {
+          "id": "11",
+          "name":"Chocotorta",
+          "price": 800,
+          "isVegan":false,
+          "isCeliac":false,
+          "ingredients": [],
+          "photoUrl": "https://www.cronica.com.ar/__export/1653520801548/sites/cronica/img/2021/06/17/chocotorta_2_crop1623944104124.jpg_792575817.jpg"
+        },
+        {
+          "id": "12",
+          "name":"Turrón de Quaker",
+          "price": 800,
+          "isVegan":false,
+          "isCeliac":false,
+          "ingredients": [],
+          "photoUrl": "https://assets.elgourmet.com/wp-content/uploads/2023/03/cover_ipk5fgqbdh_eg-pf-platos-turron-de-avena-hi-03.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Bebidas",
+      "photoUrl": "https://img.band.uol.com.br/image/2023/02/09/bebidas-alcoolicas-181014_800x450.webp",
+      "products": [
+        {
+          "id": "13",
+          "name":"Agua",
+          "price": 100,
+          "isVegan":true,
+          "isCeliac":true,
+          "ingredients": [],
+          "photoUrl": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3040004_f.jpg"
+        },
+        {
+          "id": "14",
+          "name":"Agua Saborizada Naranja",
+          "price": 100,
+          "isVegan":true,
+          "isCeliac":true,
+          "ingredients": [],
+          "photoUrl": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3040783_f.jpg"
+        },
+        {
+          "id": "15",
+          "name":"Fanta Uva",
+          "price": 100,
+          "isVegan":true,
+          "isCeliac":true,
+          "ingredients": [],
+          "photoUrl": "https://carrefourar.vtexassets.com/arquivos/ids/332920/7790895648670_E02.jpg?v=638212197029330000"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Combos",
+      "photoUrl": "https://i-ticketing.iwos.com/1000x1000-th/products/220/products_220_2.png",
+      "products": [
+        {
+          "id": "16",
+          "name":"Pizza party (4 pizzas)",
+          "price": 100,
+          "isVegan":false,
+          "isCeliac":false,
+          "ingredients": [],
+          "photoUrl": "https://thepostsportsbar.com/wp-content/uploads/2019/07/ALL-Pizzas-0045-top-down.jpg"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Otros",
+      "photoUrl": "https://eldiariony.com/wp-content/uploads/sites/2/2023/06/shutterstock_521741356.jpg?resize=360,270&quality=80",
+      "products": [
+        {
+          "id": "17",
+          "name":"Papas fritas",
+          "price": 100,
+          "isVegan":false,
+          "isCeliac":false,
+          "ingredients": [],
+          "photoUrl": "https://cocina-casera.com/wp-content/uploads/2023/01/patatas-fritas-crujientes-francesa-1.jpg"
+        },
+        {
+          "id": "18",
+          "name":"Ensalada César",
+          "price": 100,
+          "isVegan":false,
+          "isCeliac":false,
+          "ingredients": ["Lechuga","Salsa César","Pollo","Croutones"],
+          "photoUrl": "https://www.cocinacaserayfacil.net/wp-content/uploads/2018/06/Ensalada-cesar.jpg"
+        },
+        {
+          "id": "19",
+          "name":"Ensalada simple",
+          "price": 100,
+          "isVegan":true,
+          "isCeliac":true,
+          "ingredients": ["Lechuga","Tomate","Zanahoria"],
+          "photoUrl": "https://www.plantheoshops.com.ar/mitienda/galeria/files/5/61b36abcb06eb_1639148220-7227.jpeg"
+        }
+      ]
+    }
+  ]
