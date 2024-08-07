@@ -1,0 +1,10 @@
+#categoriesContainer{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 15px 0;
+}
+app-product-card{
+    width: 100%;
+}

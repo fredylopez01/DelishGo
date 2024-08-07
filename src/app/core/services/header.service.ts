@@ -5,7 +5,7 @@ import { Injectable, signal } from '@angular/core';
 })
 export class HeaderService {
 
-  title = signal("Arcos Dorados");
+  title = signal("");
   isHeaderLarge = signal(false);
 
   constructor() { }
