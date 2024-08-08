@@ -13,10 +13,10 @@
         <p>Apto Celiaco</p>
     </div>
     <label class="lblNotes" for="notes">Notas: </label>
-    <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
+    <textarea name="notes" id="notes" cols="30" rows="10" [(ngModel)]="notes"></textarea>
     <div class="amountContainer">
         <label for="amount">Cantidad: </label>
         <app-product-counter (newAmount)="amount.set($event)"></app-product-counter>
     </div>
-    <button>Agregar al carrito</button>
+    <button (click)="addProductToCart()">Agregar al carrito</button>
 </div>
