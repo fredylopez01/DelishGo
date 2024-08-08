@@ -1,1 +1,22 @@
-<p>product works!</p>
+<img id="imgProduct" src="{{product?.photoUrl}}" alt="{{product?.name}}">
+<div id="infoProduct">
+    <ul>
+        <span>Ingredientes: </span>
+        <li *ngFor="let item of product?.ingredients">{{item}}</li>
+    </ul>
+    <div class="is" *ngIf="product?.isVegan">
+        <img src="./../../../../assets/icons/vegano.svg" alt="Apto vegano">
+        <p>Apto Veganos</p>
+    </div>
+    <div class="is" *ngIf="product?.isCeliac" >
+        <img src="./../../../../assets/icons/celiaco.png" alt="Apto celiaco">
+        <p>Apto Celiaco</p>
+    </div>
+    <label class="lblNotes" for="notes">Notas: </label>
+    <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
+    <div class="amountContainer">
+        <label for="amount">Cantidad: </label>
+
+    </div>
+    <button>Agregar al carrito</button>
+</div>

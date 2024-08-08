@@ -8,8 +8,8 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class TabsComponent {
   status = [false, false, false, false];
-  activeColor = "#FFF10A";
-  disabledColor = "#555";
+  activeColor = "#555";
+  disabledColor = "#FFF10A";
 
   constructor(private router: Router){
     this.router.events.subscribe(event => {

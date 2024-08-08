@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ProductCardComponent } from 'src/app/core/components/product-card/product-card.component';
 import { Product } from 'src/app/core/interfaces/product';
 import { HeaderService } from 'src/app/core/services/header.service';
@@ -14,7 +14,8 @@ import { Category } from 'src/app/core/interfaces/category';
   standalone: true,
   imports: [
     ProductCardComponent,
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class SectionComponent implements OnInit {
