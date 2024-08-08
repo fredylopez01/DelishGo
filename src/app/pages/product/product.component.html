@@ -16,7 +16,7 @@
     <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
     <div class="amountContainer">
         <label for="amount">Cantidad: </label>
-
+        <app-product-counter (newAmount)="amount.set($event)"></app-product-counter>
     </div>
     <button>Agregar al carrito</button>
 </div>

@@ -1,0 +1,18 @@
+@use "./../../../../assets/styles/variables.scss";
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 0 5px;
+    height: 25px;
+    background-color: variables.$mainColor;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+button{
+    border-radius: 5px;
+    background-color: variables.$activeItem;
+}

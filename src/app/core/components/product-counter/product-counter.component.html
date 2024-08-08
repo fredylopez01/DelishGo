@@ -1,0 +1,5 @@
+<div class="container">
+    <button [disabled]="amount()===1" (click)="updateAmount(-1)">-</button>
+    <span id="amountProduct">{{amount()}}</span>
+    <button (click)="updateAmount(1)">+</button>
+</div>
