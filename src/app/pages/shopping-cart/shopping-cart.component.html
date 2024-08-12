@@ -1,11 +1,24 @@
 <div class="containerCart">
-    <div class="element" *ngFor="let product of shoppingCartService.shoppingCart">
-        <span>Producto: {{product.idProduct}}</span>
-        <button (click)="deleteProduct(product.idProduct)">X</button>
-        <app-product-counter 
-            [initialAmount]="product.amount" 
-            (newAmount)="shoppingCartService.changeAmount(product.idProduct, $event)">
-        </app-product-counter>
-        <span *ngIf="product.notes !== ''">{{product.notes}}</span>
+    <div class="element" *ngFor="let product of shoppingCartService.shoppingCart, index as i" class="productCard">
+        <ng-container *ngIf="products[i]">
+            <div id="imgProduct" [ngStyle]="{'background-image': 'url('+products[i].photoUrl+')'}">
+                <img *ngIf="products[i].isVegan" src="./../../../../assets/icons/vegano.svg" alt="Apto vegano">
+                <img *ngIf="products[i].isCeliac" src="./../../../../assets/icons/celiaco.png" alt="Apto celiaco">
+            </div>
+            <div id="center">
+                <h4>{{products[i].name}}</h4>
+                <span *ngIf="product.notes !== ''">{{product.notes}}</span>
+                <app-product-counter 
+                    [initialAmount]="product.amount" 
+                    (newAmount)="shoppingCartService.changeAmount(product.idProduct, $event)">
+                </app-product-counter>
+            </div>
+            <div id="right">
+                <button (click)="deleteProduct(product.idProduct)">
+                    <img id="imgRemove" src="./../../../assets/icons/delete.svg" alt="remove">
+                </button>
+                <span>${{products[i].price}}</span>
+            </div>
+        </ng-container>
     </div>
 </div>

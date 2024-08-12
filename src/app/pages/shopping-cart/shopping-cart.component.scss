@@ -1,0 +1,74 @@
+@use "./../../../assets/styles/variables.scss";
+
+.containerCart{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 15px 0;
+}
+.productCard{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    border-radius: 10px;
+    background-color: variables.$productCardColor;
+    overflow: hidden;
+    font-size: small;
+}
+#imgProduct{
+    height: 100%;
+    width: 30%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: end;
+    gap: 5px;
+    background-color: #8ae058;
+    img{
+        height: 20px;
+        margin-bottom: 5px;
+        border-radius: 50px;
+        background-color: #8ae058;
+        &:first-child{
+            margin-left: 5px;
+        }
+    }
+}
+#center{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 5px;
+    > span{
+        height: 10px;
+       overflow: scroll;
+       font-size: x-small;
+    }
+}
+h4{
+    font-weight: bold;
+}
+#right{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: end;
+    padding: 5px 7px;
+    > span{
+        font-weight: bold;
+    }
+}
+button{
+    border: unset;
+    padding: 0;
+    border-radius: 10px;
+}
+#imgRemove{
+    width: 24px;
+}
