@@ -21,4 +21,35 @@
             </div>
         </ng-container>
     </div>
+
+    <a id="buttonAdd" [routerLink]="['/']" routerLinkActive="router-link-active" >+</a>
+
+    <section>
+        <h3>Dirección del envío</h3>
+        <div id="infoDirection">
+            <div>
+                <h4>Calle falsa 123</h4>
+                <p>San Lorenzo, Santa Fe 2000</p>
+            </div>
+            <button [routerLink]="['/profile']" routerLinkActive="router-link-active" >
+                <img id="imgEdit" src="./../../../assets/icons/edit.svg" alt="Editar">
+            </button>
+        </div>
+    </section>
+    <div id="valuesContainer">
+        <div>
+            <p>Subtotal</p>
+            <p>Delivery</p>
+            <p>Total</p>
+        </div>
+        <div>
+            <p>$<span>1300</span></p>
+            <p>$<span>100</span></p>
+            <p>$<span>1400</span></p>
+        </div>
+    </div>
+    <button id="btnMessage">
+        <img id="imgWhatsApp" src="./../../../assets/icons/whatsapp.svg" alt="">
+        Hacer pedido
+    </button>
 </div>
