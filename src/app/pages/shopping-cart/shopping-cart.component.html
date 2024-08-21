@@ -10,7 +10,7 @@
                 <span *ngIf="product.notes !== ''">{{product.notes}}</span>
                 <app-product-counter 
                     [initialAmount]="product.amount" 
-                    (newAmount)="shoppingCartService.changeAmount(product.idProduct, $event)">
+                    (newAmount)="this.changeAmount(product.idProduct, $event)">
                 </app-product-counter>
             </div>
             <div id="right">
@@ -43,9 +43,9 @@
             <p>Total</p>
         </div>
         <div>
-            <p>$<span>1300</span></p>
-            <p>$<span>100</span></p>
-            <p>$<span>1400</span></p>
+            <p>$<span>{{subtotal}}</span></p>
+            <p>$<span>{{delivery}}</span></p>
+            <p>$<span>{{total}}</span></p>
         </div>
     </div>
     <button id="btnMessage">
