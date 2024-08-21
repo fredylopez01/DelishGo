@@ -11,6 +11,9 @@
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    gap: 14px 0;
+}
+.body{
     gap: 18px 0;
 }
 .spaceForm{
@@ -25,6 +28,13 @@ div>img{
 div>input{
     width: 70vw;
     height: 2rem;
+}
+.invalid{
+    font-size: small;
+    color: red;
+    margin-top: -10px;
+    margin-left: 35px;
+    align-self: first baseline;
 }
 button{
     width: 100%;

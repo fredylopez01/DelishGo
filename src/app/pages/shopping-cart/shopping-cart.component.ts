@@ -6,6 +6,7 @@ import { ProductCounterComponent } from "../../core/components/product-counter/p
 import { Product } from 'src/app/core/interfaces/product';
 import { ProductService } from 'src/app/core/services/product.service';
 import { RouterModule } from '@angular/router';
+import { ProfileService } from 'src/app/core/services/profile.service';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -17,6 +18,7 @@ import { RouterModule } from '@angular/router';
 export class ShoppingCartComponent implements OnInit {
   serviceHeader = inject(HeaderService);
   shoppingCartService = inject(ShoppingCartService);
+  profileService = inject(ProfileService);
   products:Product[] =[];
   productService = inject(ProductService);
   total:number = 0;

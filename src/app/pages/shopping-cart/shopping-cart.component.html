@@ -28,8 +28,14 @@
         <h3>Dirección del envío</h3>
         <div id="infoDirection">
             <div>
-                <h4>Calle falsa 123</h4>
-                <p>San Lorenzo, Santa Fe 2000</p>
+                <ng-container *ngIf="profileService.profile(), else empty">
+                    <h4>{{profileService.profile()?.name}}</h4>
+                    <p>{{profileService.profile()?.direction}} - {{profileService.profile()?.phone}}</p>
+                    <p>{{profileService.profile()?.deliveryDetails}}</p>
+                </ng-container>
+                <ng-template #empty>
+                    <p>Ingresa tus datos de envio</p>
+                </ng-template>
             </div>
             <button [routerLink]="['/profile']" routerLinkActive="router-link-active" >
                 <img id="imgEdit" src="./../../../assets/icons/edit.svg" alt="Editar">
