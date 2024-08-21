@@ -1,1 +1,26 @@
-<p>profile works!</p>
+<div class="body">
+    <img id="imgUser" src="./../../../assets/icons/profile.svg" alt="User">
+    <form #form="ngForm">
+        <div class="spaceForm">
+            <img src="./../../../assets/icons/name.svg" alt="nombre">
+            <input type="text" placeholder="Nombre completo" [(ngModel)]="profile.name">
+        </div>
+        <div class="spaceForm">
+            <img src="./../../../assets/icons/direction.svg" alt="dirección">
+            <input type="text" placeholder="Dirección" [(ngModel)]="profile.direction">
+        </div>
+        <div class="spaceForm">
+            <img src="./../../../assets/icons/phone.svg" alt="telefono">
+            <input type="tel" placeholder="Telofono" [(ngModel)]="profile.phone">
+        </div>
+        <div class="spaceForm">
+            <img src="./../../../assets/icons/email.svg" alt="email">
+            <input type="tel" placeholder="Email" [(ngModel)]="profile.email">
+        </div>
+        <div class="spaceForm">
+            <img src="./../../../assets/icons/notes.svg" alt="detalles">
+            <input type="tel" placeholder="Detalles" [(ngModel)]="profile.deliveryDetails">
+        </div>
+        <button>Guardar</button>
+    </form>    
+</div>

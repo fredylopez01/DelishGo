@@ -1,0 +1,43 @@
+@use "./../../../assets/styles/variables.scss";
+
+.body{
+    margin: 20px;
+}
+#imgUser{
+    width: 33vw;
+}
+.body, form{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 18px 0;
+}
+.spaceForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+div>img{
+    width: 25px;
+}
+div>input{
+    width: 70vw;
+    height: 2rem;
+}
+button{
+    width: 100%;
+    height: 60px;
+    font-size: larger;
+    padding: 10px;
+    align-self: center;
+    background-color: variables.$buttonCar;
+    color: variables.$fontBtnMessage;
+    border-radius: 10px;
+    border: unset;
+    cursor: pointer;
+    &:disabled{
+        background-color: variables.$buttonSaveDisabled;
+    }
+}

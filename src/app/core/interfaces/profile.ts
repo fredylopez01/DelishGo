@@ -1,6 +1,7 @@
-interface Profile{
+export interface Profile{
     name: string,
     direction: string,
-    deliveryDetails: string,
-    phone?: string
+    phone: string,
+    email: string,
+    deliveryDetails: string
 }
