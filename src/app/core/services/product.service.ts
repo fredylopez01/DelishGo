@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../interfaces/product';
 import { Category } from '../interfaces/category';
+import { Search } from '../interfaces/search';
 
 @Injectable({
   providedIn: 'root'
@@ -31,6 +32,24 @@ export class ProductService {
     const products = await this.getAllProducts();
     const chooseProduct =  products.find(product => product.id == id);
     return chooseProduct ? chooseProduct : undefined;
+  }
+
+  async search(paramsSearching: Search) {
+    const products = await this.getAllProducts();
+    const filteredProducts = products.filter(product => {
+      if(paramsSearching.isCeliac && !product.isCeliac) return false;
+      if(paramsSearching.isVegan && !product.isVegan) return false;
+      const isSimilarName = product.name.toLowerCase().includes(paramsSearching.keyWords.toLowerCase());
+      if(isSimilarName) return true;
+      for (let i = 0; i < product.ingredients.length; i++) {
+        const ingredient = product.ingredients[i];
+        if(ingredient.toLowerCase().includes(paramsSearching.keyWords.toLowerCase())){
+          return true;
+        }
+      }
+      return false;
+    })
+    return filteredProducts;
   }
 
 }

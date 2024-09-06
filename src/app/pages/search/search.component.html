@@ -1,1 +1,23 @@
-<p>search works!</p>
+<form class="container" #searchForm="ngForm" (change)="search()">
+    <div id="searchBar">
+        <img id="imgSearch" src="./../../../assets/icons/magnifyingGlasses.svg" alt="search">
+        <input id="keyWord" type="text" placeholder="Buscar" name="keyWords" [(ngModel)]="paramsSearching.keyWords">
+    </div>
+    <div id="filters">
+        <div class="is">
+            <img src="./../../../assets/icons/celiaco.png" alt="Apto celiaco">
+            <input type="checkbox" name="isCeliac" id="isCeliac" [(ngModel)]="paramsSearching.isCeliac">
+            <span>Apto celiaco</span>
+        </div>
+        <div class="is">
+            <img src="./../../../assets/icons/vegano.svg" alt="Apto vegano">
+            <input type="checkbox" name="isVegan" id="isVegan" [(ngModel)]="paramsSearching.isVegan">
+            <span>Apto Vegano</span>
+        </div>
+    </div>
+</form>
+<div id="resultsContainer">
+    <app-product-card
+        *ngFor="let product of results" [product]="product">
+    </app-product-card>
+</div>
