@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   categories: Category[] = [];
 
   ngOnInit(): void {
-    this.serviceHeader.title.set("Arcos Dorados");
+    this.serviceHeader.title.set("Bienvenido");
     this.serviceHeader.isHeaderLarge.set(true);
     this.categoriesService.getAllCategories().then(res => this.categories = res);
   }

@@ -1,4 +1,4 @@
-<div class="containerCart">
+<div *ngIf="shoppingCartService.shoppingCart.length !== 0, else emptyShoppingCart" class="containerCart">
     <div class="element" *ngFor="let product of shoppingCartService.shoppingCart, index as i" class="productCard">
         <ng-container *ngIf="products[i]">
             <div id="imgProduct" [ngStyle]="{'background-image': 'url('+products[i].photoUrl+')'}">
@@ -54,8 +54,31 @@
             <p>$<span>{{total}}</span></p>
         </div>
     </div>
-    <button id="btnMessage">
+
+    <button id="btnCopy"  [cdkCopyToClipboard]="copyMessage()">
+        <span class="material-icons">content_copy</span>
+        <span>Copiar Mensaje</span>
+    </button>
+
+    <button id="btnMessage" (click)="sendMessage()">
         <img id="imgWhatsApp" src="./../../../assets/icons/whatsapp.svg" alt="">
         Hacer pedido
     </button>
 </div>
+
+<ng-template #emptyShoppingCart>
+    <div  id="emptyCartContainer">
+        <h1>Tu carrito está vacío</h1>
+        <p>No hay ningún producto por el momento</p>
+        <span id="imgCart" class="material-icons">shopping_cart</span>
+        <button [routerLink]="['/']" routerLinkActive="router-link-active" >Agregar</button>
+    </div>
+</ng-template>
+
+<dialog method="modal" #dialog>
+    <p>¿Pudiste realizar el pedido?</p>
+    <div>
+        <button id="btnYes" (click)="endDelivery()"><span>Sí</span><span>Reiniciar pedido</span></button>
+        <button id="btnNo" (click)="editDelivery()"><span>No</span><span>Editar pedido</span></button>
+    </div>
+</dialog>
