@@ -67,7 +67,7 @@ export class ShoppingCartComponent implements OnInit {
     this.order = "";
     for (let i = 0; i < this.shoppingCartService.shoppingCart.length; i++) {
       let product = await this.productService.getProductById(this.shoppingCartService.shoppingCart[i].idProduct);
-      this.order += `* ${this.shoppingCartService.shoppingCart[i].amount} X ${product?.name}
+      this.order += `* ${this.shoppingCartService.shoppingCart[i].amount} X ${product?.name}. ${this.shoppingCartService.shoppingCart[i].notes}
 `;
     }
   }

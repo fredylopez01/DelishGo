@@ -13,13 +13,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    svg{
+    color: variables.$activeItem;
+    span{
+        font-size: xxx-large;
         display: block;
         margin: auto;
         transition: 200ms ease-in-out;
     }
     transition: 200ms ease-in-out;
 }
+
 .selected{
     background-color: variables.$activeItem;
+    color: variables.$disabledItem;
 }
