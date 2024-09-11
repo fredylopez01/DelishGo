@@ -1,6 +1,19 @@
+// app-tabs{
+//     position: fixed;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+// }
+#body{
+    display: flex;
+    flex-direction: column;
+    height: 100svh;
+    overflow: hidden;
+}
+main{
+    flex: 1;
+    overflow-y: scroll;
+}
 app-tabs{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    margin-top: auto;
 }

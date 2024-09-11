@@ -9,12 +9,12 @@
     padding: 0 5px;
     height: 25px;
     background-color: variables.$mainColor;
-    border-radius: 5px;
+    border-radius: variables.$border-radius-x-small;
     overflow: hidden;
 }
 
 button{
-    border-radius: 5px;
+    border-radius: variables.$border-radius-x-small;
     background-color: variables.$activeItem;
     border: unset;
 }

@@ -1,17 +1,17 @@
 @use "./../../../assets/styles/variables.scss";
 
-.containerCart{
-    margin: 20px;
+.containerProducts{
+    margin: 10px 20px;
     display: flex;
     flex-direction: column;
     justify-items: center;
-    gap: 15px 0;
+    gap: 10px 0;
 }
 .productCard{
     width: 100%;
     height: 90px;
     display: flex;
-    border-radius: 10px;
+    border-radius: variables.$border-radius-small;
     background-color: variables.$productCardColor;
     overflow: hidden;
     font-size: small;
@@ -28,7 +28,7 @@
     img{
         height: 20px;
         margin-bottom: 5px;
-        border-radius: 50px;
+        border-radius: variables.$border-radius-x-large;
         background-color: #8ae058;
         &:first-child{
             margin-left: 5px;
@@ -43,7 +43,7 @@
     justify-content: space-evenly;
     align-items: center;
     margin: 0 5px;
-    > span{
+    span{
         height: 10px;
        overflow: scroll;
        font-size: x-small;
@@ -62,14 +62,14 @@ h3,
     justify-content: space-evenly;
     align-items: flex-end;
     padding: 5px 7px;
-    > span{
+    span{
         font-weight: bold;
     }
 }
 button{
     border: unset;
     padding: 0;
-    border-radius: 10px;
+    border-radius: variables.$border-radius-small;
     cursor: pointer;
 }
 #imgRemove, 
@@ -86,7 +86,10 @@ button{
     color: black;
     text-decoration: none;
     padding: 5px 23px 10px 20px;
-    border-radius: 10px;
+    border-radius: variables.$border-radius-small;
+}
+#deliveryDetailsContainer{
+    margin: 10px 20px;
 }
 #infoDirection{
     display: flex;
@@ -95,7 +98,7 @@ button{
     background-color: variables.$productCardColor;
     margin: 5px;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: variables.$border-radius-x-small;
 }
 #imgEdit{
     margin: 4px;
@@ -104,12 +107,16 @@ button{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    > div > p {
+    margin: 5px 20px;
+    div > p {
         margin: 2px;
     }
-    > div:nth-child(2){
+    div:nth-child(2){
         text-align: end;
     }
+}
+#buttonsContainer{
+    margin: 0 20px;
 }
 #btnCopy,
 #btnMessage{
@@ -121,8 +128,9 @@ button{
     gap: 10px;
     font-size: larger;
     padding: 10px;
+    margin: 0 0 5px;
     align-self: center;
-    border-radius: 10px;
+    border-radius: variables.$border-radius-small;
 }
 #btnCopy{
     background-color: variables.$mainColor;
@@ -131,12 +139,15 @@ button{
 #btnMessage{
     background-color: variables.$btnMessage;
     color: variables.$fontBtnMessage;
+    &:disabled{
+        background-color: variables.$btnMessage-disabled;
+    }
 }
 dialog{
     background-color: variables.$productCardColor;
     padding: 30px 40px;
     border: 2px solid variables.$buttonCar;
-    border-radius: 15px;
+    border-radius: variables.$border-radius-medium;
     box-shadow: 0 5px 5px 5px gray;
     p{
         font-size: large;
@@ -175,7 +186,7 @@ dialog{
     margin: 20px;
     gap: 15px;
     background-color: variables.$productCardColor;
-    border-radius: 20px;
+    border-radius: variables.$border-radius-large;
     h1{
         font-size: x-large;
         font-weight: bold;
@@ -188,6 +199,6 @@ dialog{
     }
 }
 #imgCart{
-    font-size: 50vw;
+    font-size: 30vh;
     color: variables.$colorFontButtonCar;
 }

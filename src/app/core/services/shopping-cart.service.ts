@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ElementCart } from '../interfaces/elementCart';
+import { ConfigService } from './config.service';
 
 @Injectable({
   providedIn: 'root'
@@ -7,10 +8,19 @@ import { ElementCart } from '../interfaces/elementCart';
 export class ShoppingCartService {
   shoppingCart: ElementCart[] = [];
 
-  constructor() { 
+  constructor(private config:ConfigService) { 
     let cart = localStorage.getItem("shoppingCart");
     if(cart){
-      this.shoppingCart = JSON.parse(cart);
+      const itemSaved = JSON.parse(cart);
+      if(itemSaved){
+        const dateSaved = new Date(itemSaved.date);
+        const dateToday = new Date();
+        if(dateToday.getTime() - dateSaved.getTime() > 1000*60*60*24*this.config.config().daysCartDuration){
+          this.empty();
+        } else {
+          this.shoppingCart = itemSaved.products;
+        }
+      }
     }
   }
 
@@ -39,7 +49,12 @@ export class ShoppingCartService {
   }
 
   updateStorage(){
-    localStorage.setItem("shoppingCart", JSON.stringify(this.shoppingCart));
+    const date = new Date();
+    const itemToSave = {
+      date,
+      products: this.shoppingCart
+    }
+    localStorage.setItem("shoppingCart", JSON.stringify(itemToSave));
   }
 
   empty(){

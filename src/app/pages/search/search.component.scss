@@ -13,7 +13,7 @@
     padding: 7px 10px;
     margin-bottom: 10px;
     background-color: variables.$productCardColor;
-    border-radius: 20px;
+    border-radius: variables.$border-radius-large;
 }
 #imgSearch{
     width: 24px;
@@ -50,4 +50,30 @@
 }
 app-product-card{
     width: 100%;
+}
+#noResultsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 65vh;
+    margin: 20px;
+    gap: 15px;
+    background-color: variables.$productCardColor;
+    border-radius: variables.$border-radius-large;
+    h1{
+        font-size: x-large;
+        font-weight: bold;
+    }
+    button{
+        padding: 20px 30px;
+        background-color: variables.$buttonCar;
+        color: variables.$fontBtnMessage;
+        font-size: medium;
+    }
+}
+#imgCart{
+    font-size: 30vh;
+    color: variables.$colorFontButtonCar;
 }

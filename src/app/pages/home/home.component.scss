@@ -1,7 +1,12 @@
 #categoriesContainer{
-    margin: 20px 0;
+    margin: 20px 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    gap: 15px 0;
+    justify-content: space-between;
+    gap: 15px 10px;
+}
+app-category-card{
+    width: 100%;
+    height: auto;
 }

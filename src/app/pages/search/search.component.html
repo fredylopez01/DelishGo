@@ -1,23 +1,32 @@
-<form class="container" #searchForm="ngForm" (change)="search()">
-    <div id="searchBar">
-        <img id="imgSearch" src="./../../../assets/icons/magnifyingGlasses.svg" alt="search">
-        <input id="keyWord" type="text" placeholder="Buscar" name="keyWords" [(ngModel)]="paramsSearching.keyWords">
-    </div>
-    <div id="filters">
-        <div class="is">
-            <img src="./../../../assets/icons/celiaco.png" alt="Apto celiaco">
-            <input type="checkbox" name="isCeliac" id="isCeliac" [(ngModel)]="paramsSearching.isCeliac">
-            <span>Apto celiaco</span>
+<section>
+    <form class="container" #searchForm="ngForm" (change)="search()">
+        <div id="searchBar">
+            <img id="imgSearch" src="./../../../assets/icons/magnifyingGlasses.svg" alt="search">
+            <input id="keyWord" type="text" placeholder="Buscar" name="keyWords" [(ngModel)]="paramsSearching.keyWords">
         </div>
-        <div class="is">
-            <img src="./../../../assets/icons/vegano.svg" alt="Apto vegano">
-            <input type="checkbox" name="isVegan" id="isVegan" [(ngModel)]="paramsSearching.isVegan">
-            <span>Apto Vegano</span>
+        <div id="filters">
+            <div class="is">
+                <img src="./../../../assets/icons/celiaco.png" alt="Apto celiaco">
+                <input type="checkbox" name="isCeliac" id="isCeliac" [(ngModel)]="paramsSearching.isCeliac">
+                <span>Apto celiaco</span>
+            </div>
+            <div class="is">
+                <img src="./../../../assets/icons/vegano.svg" alt="Apto vegano">
+                <input type="checkbox" name="isVegan" id="isVegan" [(ngModel)]="paramsSearching.isVegan">
+                <span>Apto Vegano</span>
+            </div>
         </div>
+    </form>
+    <div id="resultsContainer" *ngIf="results().length !== 0; else noResults">
+        <app-product-card *ngFor="let product of results()" [product]="product" [routerLink]="['/product', product.id]">
+        </app-product-card>
     </div>
-</form>
-<div id="resultsContainer">
-    <app-product-card
-        *ngFor="let product of results" [product]="product">
-    </app-product-card>
-</div>
+
+    <ng-template #noResults>
+        <div id="noResultsContainer">
+            <h1>No se encontraron resultados</h1>
+            <span id="imgCart" class="material-icons">youtube_searched_for</span>
+            <p>Intenta usar otras palabras clave o quita los filtros de busqueda</p>
+        </div>
+    </ng-template>
+</section>

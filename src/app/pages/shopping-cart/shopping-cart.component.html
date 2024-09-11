@@ -1,30 +1,31 @@
-<div *ngIf="shoppingCartService.shoppingCart.length !== 0, else emptyShoppingCart" class="containerCart">
-    <div class="element" *ngFor="let product of shoppingCartService.shoppingCart, index as i" class="productCard">
-        <ng-container *ngIf="products[i]">
-            <div id="imgProduct" [ngStyle]="{'background-image': 'url('+products[i].photoUrl+')'}">
-                <img *ngIf="products[i].isVegan" src="./../../../../assets/icons/vegano.svg" alt="Apto vegano">
-                <img *ngIf="products[i].isCeliac" src="./../../../../assets/icons/celiaco.png" alt="Apto celiaco">
+<ng-container *ngIf="shoppingCartService.shoppingCart.length !== 0, else emptyShoppingCart">
+    <section class="containerProducts" >
+        <div *ngFor="let product of shoppingCartService.shoppingCart, index as i">
+            <div class="productCard" *ngIf="products()[i]">
+                <div id="imgProduct" [ngStyle]="{'background-image': 'url('+products()[i].photoUrl+')'}">
+                    <img *ngIf="products()[i].isVegan" src="./../../../../assets/icons/vegano.svg" alt="Apto vegano">
+                    <img *ngIf="products()[i].isCeliac" src="./../../../../assets/icons/celiaco.png" alt="Apto celiaco">
+                </div>
+                <div id="center">
+                    <h4>{{products()[i].name}}</h4>
+                    <span *ngIf="product.notes !== ''">{{product.notes}}</span>
+                    <app-product-counter [initialAmount]="product.amount"
+                        (newAmount)="this.changeAmount(product.idProduct, $event)">
+                    </app-product-counter>
+                </div>
+                <div id="right">
+                    <button (click)="deleteProduct(product.idProduct)">
+                        <img id="imgRemove" src="./../../../assets/icons/delete.svg" alt="remove">
+                    </button>
+                    <span>${{products()[i].price}}</span>
+                </div>
             </div>
-            <div id="center">
-                <h4>{{products[i].name}}</h4>
-                <span *ngIf="product.notes !== ''">{{product.notes}}</span>
-                <app-product-counter 
-                    [initialAmount]="product.amount" 
-                    (newAmount)="this.changeAmount(product.idProduct, $event)">
-                </app-product-counter>
-            </div>
-            <div id="right">
-                <button (click)="deleteProduct(product.idProduct)">
-                    <img id="imgRemove" src="./../../../assets/icons/delete.svg" alt="remove">
-                </button>
-                <span>${{products[i].price}}</span>
-            </div>
-        </ng-container>
-    </div>
+        </div>
 
-    <a id="buttonAdd" [routerLink]="['/']" routerLinkActive="router-link-active" >+</a>
+        <a id="buttonAdd" [routerLink]="['/']" routerLinkActive="router-link-active">+</a>
+    </section>
 
-    <section>
+    <section id="deliveryDetailsContainer">
         <h3>Dirección del envío</h3>
         <div id="infoDirection">
             <div>
@@ -37,41 +38,42 @@
                     <p>Ingresa tus datos de envio</p>
                 </ng-template>
             </div>
-            <button [routerLink]="['/profile']" routerLinkActive="router-link-active" >
+            <button [routerLink]="['/profile']" routerLinkActive="router-link-active">
                 <img id="imgEdit" src="./../../../assets/icons/edit.svg" alt="Editar">
             </button>
         </div>
     </section>
-    <div id="valuesContainer">
+    <section id="valuesContainer">
         <div>
             <p>Subtotal</p>
             <p>Delivery</p>
             <p>Total</p>
         </div>
         <div>
-            <p>$<span>{{subtotal}}</span></p>
-            <p>$<span>{{delivery}}</span></p>
-            <p>$<span>{{total}}</span></p>
+            <p>${{subtotal}}</p>
+            <p>${{delivery}}</p>
+            <p>${{total}}</p>
         </div>
-    </div>
+    </section>
 
-    <button id="btnCopy"  [cdkCopyToClipboard]="copyMessage()">
-        <span class="material-icons">content_copy</span>
-        <span>Copiar Mensaje</span>
-    </button>
-
-    <button id="btnMessage" (click)="sendMessage()">
-        <img id="imgWhatsApp" src="./../../../assets/icons/whatsapp.svg" alt="">
-        Hacer pedido
-    </button>
-</div>
+    <section id="buttonsContainer">
+        <button id="btnCopy" [cdkCopyToClipboard]="copyMessage()">
+            <span class="material-icons">content_copy</span>
+            <span>Copiar Mensaje</span>
+        </button>
+        <button id="btnMessage" [disabled]="!profileService.profile()" (click)="sendMessage()">
+            <img id="imgWhatsApp" src="./../../../assets/icons/whatsapp.svg" alt="">
+            Hacer pedido
+        </button>
+    </section>
+</ng-container>
 
 <ng-template #emptyShoppingCart>
-    <div  id="emptyCartContainer">
+    <div id="emptyCartContainer">
         <h1>Tu carrito está vacío</h1>
         <p>No hay ningún producto por el momento</p>
-        <span id="imgCart" class="material-icons">shopping_cart</span>
-        <button [routerLink]="['/']" routerLinkActive="router-link-active" >Agregar</button>
+        <span id="imgCart" class="material-icons">add_shopping_cart</span>
+        <button [routerLink]="['/']" routerLinkActive="router-link-active">Agregar</button>
     </div>
 </ng-template>
 

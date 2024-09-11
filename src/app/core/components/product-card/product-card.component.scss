@@ -3,7 +3,7 @@
 #productContainer{
     height: 80px;
     display: flex;
-    border-radius: 10px;
+    border-radius: variables.$border-radius-small;
     background-color: variables.$productCardColor;
     overflow: hidden;
     font-size: small;
@@ -13,13 +13,12 @@
     flex: 1;
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: end;
+    display: flex-end;
     gap: 5px;
     img{
         height: 20px;
         margin-bottom: 5px;
-        border-radius: 50px;
+        border-radius: variables.$border-radius-x-large;
         background-color: #8ae058;
         &:first-child{
             margin-left: 5px;

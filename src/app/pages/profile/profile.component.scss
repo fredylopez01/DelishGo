@@ -4,14 +4,15 @@
     margin: 20px;
 }
 #imgUser{
-    width: 33vw;
+    width: 130px;
+    aspect-ratio: 1;
 }
 .body, form{
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    gap: 14px 0;
+    gap: 16px 0;
 }
 .body{
     gap: 18px 0;
@@ -21,13 +22,19 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    img{
+        width: 25px;
+    }
 }
-div>img{
-    width: 25px;
-}
-div>input{
+input{
     width: 70vw;
+    max-width: 450px;
     height: 2rem;
+    border: none;
+    border-bottom: 1px solid gray;
+    &:focus{
+        outline: none;
+    }
 }
 .invalid{
     font-size: small;
@@ -44,7 +51,7 @@ button{
     align-self: center;
     background-color: variables.$buttonCar;
     color: variables.$fontBtnMessage;
-    border-radius: 10px;
+    border-radius: variables.$border-radius-small;
     border: unset;
     cursor: pointer;
     &:disabled{

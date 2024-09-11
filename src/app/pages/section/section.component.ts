@@ -1,11 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal, WritableSignal } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ProductCardComponent } from 'src/app/core/components/product-card/product-card.component';
 import { Product } from 'src/app/core/interfaces/product';
 import { HeaderService } from 'src/app/core/services/header.service';
 import { CategoryService } from 'src/app/core/services/category.service';
-import { Category } from 'src/app/core/interfaces/category';
 
 @Component({
   selector: 'app-section',
@@ -23,7 +22,7 @@ export class SectionComponent implements OnInit {
   serviceHeader = inject(HeaderService);
   categoryService = inject(CategoryService);
   ac = inject(ActivatedRoute);
-  products: Product[] = [];
+  products: WritableSignal<Product[]> = signal([]);
 
 
   ngOnInit(): void {
@@ -32,7 +31,7 @@ export class SectionComponent implements OnInit {
         this.categoryService.getCategoryById(parseInt(params['id']))
         .then(category =>{
           if(category){
-            this.products = category?.products;
+            this.products.set(category?.products);
             this.serviceHeader.title.set(category?.name);
           }
         })
