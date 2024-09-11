@@ -1,27 +1,35 @@
 # ProjectFoodAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.13.
+## Descipción
+Este es un proyecto que modela el funcionamiento de una aplicación de comidas con pedidos a domicilio mediante whatsapp. Cuenta con página de productos o home, página de busqueda, página para el carrito y además cuenta con una página del perfil del usuario.
 
-## Development server
+Esta aplicación web fue generada con [Angular CLI](https://github.com/angular/angular-cli) version 16.2.13. Además tiene un patrón de diseño basado en componentes.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Construir
 
-## Code scaffolding
+Ejecute `ng build` para construir el proyecto. Los artefactos de compilación se almacenarán en el directorio `dist/`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Ejecución
 
-## Build
+Abra la carpeta donde se encuentra el proyecto mediante la terminal y ejecute `ng serve`.
+ 
+Luego abra el navegador y ponga la siguiente dirección `http://localhost:4200/`. La aplicación se recargará automáticamente si cambia alguno de los archivos fuente.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Screens
 
-## Running unit tests
+### Screen del home o página de inicio
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![ScreenHome](./src/assets/screens/screenHome.png) 
 
-## Running end-to-end tests
+### Screen de la página de busqueda
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![ScreenSearch](./src/assets/screens/screenSearch.png)
 
-## Further help
+### Screen de la página del carrito
+![ScreenCart](./src/assets/screens/screenCart.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Screen de la página de perfil
+![ScreenProfile](./src/assets/screens/screenProfile.png)
+
+### Badges
+![Angular](https://img.shields.io/badge/-Angular-DD0031?style=flat&logo=angular&logoColor=white) ![Angular 16](https://img.shields.io/badge/angular-_v.16-red) ![scss](https://img.shields.io/badge/-Scss-eee?style=flat&logo=sass) ![TypeScript](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat) ![HTML](https://shields.io/badge/HTML-f06529?logo=html5&logoColor=white&labelColor=f06529) ![Vs Code](https://img.shields.io/badge/Vscode-007ACC?style=flat&logo=visualstudiocode&logoColor=white)
