@@ -28,3 +28,11 @@
     background-color: variables.$activeItem;
     color: variables.$disabledItem;
 }
+
+@media screen and (min-width:600px){
+    #menu{
+        flex-direction: column;
+        height: 100vh;
+        border-radius: 0;
+    }
+}

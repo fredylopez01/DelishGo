@@ -77,3 +77,21 @@ app-product-card{
     font-size: 30vh;
     color: variables.$colorFontButtonCar;
 }
+@media screen and (min-width:750px) {
+    #mainContainer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f1f0d1b7;
+    }
+    .container{
+        width: 700px;
+    }
+    #resultsContainer{
+        width: 700px;
+    }
+    #noResultsContainer{
+        width: 700px;
+    }
+}

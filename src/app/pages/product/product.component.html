@@ -1,22 +1,24 @@
-<img id="imgProduct" src="{{product?.photoUrl}}" alt="{{product?.name}}">
-<section id="infoProduct">
-    <ul>
-        <span>Ingredientes: </span>
-        <li *ngFor="let item of product?.ingredients">{{item}}</li>
-    </ul>
-    <div class="is" *ngIf="product?.isVegan">
-        <img src="./../../../../assets/icons/vegano.svg" alt="Apto vegano">
-        <p>Apto Veganos</p>
-    </div>
-    <div class="is" *ngIf="product?.isCeliac" >
-        <img src="./../../../../assets/icons/celiaco.png" alt="Apto celiaco">
-        <p>Apto Celiaco</p>
-    </div>
-    <label class="lblNotes" for="notes">Notas: </label>
-    <textarea name="notes" id="notes" cols="30" rows="10" [(ngModel)]="notes"></textarea>
-    <div class="amountContainer">
-        <label for="amount">Cantidad: </label>
-        <app-product-counter (newAmount)="amount.set($event)"></app-product-counter>
-    </div>
-    <button (click)="addProductToCart()">Agregar al carrito</button>
+<section id="mainContainer">
+    <img id="imgProduct" src="{{product?.photoUrl}}" alt="{{product?.name}}">
+    <section id="infoProduct">
+        <ul>
+            <span>Ingredientes: </span>
+            <li *ngFor="let item of product?.ingredients">{{item}}</li>
+        </ul>
+        <div class="is" *ngIf="product?.isVegan">
+            <img src="./../../../../assets/icons/vegano.svg" alt="Apto vegano">
+            <p>Apto Veganos</p>
+        </div>
+        <div class="is" *ngIf="product?.isCeliac">
+            <img src="./../../../../assets/icons/celiaco.png" alt="Apto celiaco">
+            <p>Apto Celiaco</p>
+        </div>
+        <label class="lblNotes" for="notes">Notas: </label>
+        <textarea name="notes" id="notes" cols="30" rows="10" [(ngModel)]="notes"></textarea>
+        <div class="amountContainer">
+            <label for="amount">Cantidad: </label>
+            <app-product-counter (newAmount)="amount.set($event)"></app-product-counter>
+        </div>
+        <button (click)="addProductToCart()">Agregar al carrito</button>
+    </section>
 </section>

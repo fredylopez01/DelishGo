@@ -10,3 +10,8 @@ app-category-card{
     width: 100%;
     height: auto;
 }
+@media screen and (min-width:950px) {
+    #categoriesContainer{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

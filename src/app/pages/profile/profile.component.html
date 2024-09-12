@@ -1,30 +1,37 @@
 <section class="body">
-    <img id="imgUser" src="./../../../assets/icons/profile.svg" alt="User">
-    <form #form="ngForm" (ngSubmit)="saveProfileDates()">
-        <div class="spaceForm">
-            <img src="./../../../assets/icons/name.svg" alt="nombre">
-            <input type="text" name="name" id="name" placeholder="Nombre completo" [(ngModel)]="profile.name" #name="ngModel" required minlength="5">
-        </div>
-        <p class="invalid" *ngIf="name.invalid && name.touched">Ingrese un nombre válido</p>
-        <div class="spaceForm">
-            <img src="./../../../assets/icons/direction.svg" alt="dirección">
-            <input type="text" name="direction" id="direction" placeholder="Dirección" [(ngModel)]="profile.direction"  #direction="ngModel" required minlength="9">
-        </div>
-        <p class="invalid" *ngIf="direction.invalid && direction.touched">Ingrese una direeción válida</p>
-        <div class="spaceForm">
-            <img src="./../../../assets/icons/phone.svg" alt="telefono">
-            <input type="tel" name="phone" id="phone" placeholder="Telofono" [(ngModel)]="profile.phone"  #phone="ngModel" required minlength="10">
-        </div>
-        <p class="invalid" *ngIf="phone.invalid && phone.touched">Ingrese un telefono válido</p>
-        <div class="spaceForm">
-            <img src="./../../../assets/icons/email.svg" alt="email">
-            <input type="email" name="email" id="email" placeholder="Email" [(ngModel)]="profile.email"  #email="ngModel" required minlength="5">
-        </div>
-        <p class="invalid" *ngIf="email.invalid && email.touched">Ingrese un email válido</p>
-        <div class="spaceForm">
-            <img src="./../../../assets/icons/notes.svg" alt="detalles">
-            <input type="text" name="details" id="details" placeholder="Detalles" [(ngModel)]="profile.deliveryDetails"  #details="ngModel">
-        </div>
-        <button [disabled]="form.invalid">Guardar</button>
-    </form>    
+    <div id="containerInBody">
+        <img id="imgUser" src="./../../../assets/icons/profile.svg" alt="User">
+        <form #form="ngForm" (ngSubmit)="saveProfileDates()">
+            <div class="spaceForm">
+                <img src="./../../../assets/icons/name.svg" alt="nombre">
+                <input type="text" name="name" id="name" placeholder="Nombre completo" [(ngModel)]="profile.name"
+                    #name="ngModel" required minlength="5">
+            </div>
+            <p class="invalid" *ngIf="name.invalid && name.touched">Ingrese un nombre válido</p>
+            <div class="spaceForm">
+                <img src="./../../../assets/icons/direction.svg" alt="dirección">
+                <input type="text" name="direction" id="direction" placeholder="Dirección"
+                    [(ngModel)]="profile.direction" #direction="ngModel" required minlength="9">
+            </div>
+            <p class="invalid" *ngIf="direction.invalid && direction.touched">Ingrese una direeción válida</p>
+            <div class="spaceForm">
+                <img src="./../../../assets/icons/phone.svg" alt="telefono">
+                <input type="tel" name="phone" id="phone" placeholder="Telofono" [(ngModel)]="profile.phone"
+                    #phone="ngModel" required minlength="10">
+            </div>
+            <p class="invalid" *ngIf="phone.invalid && phone.touched">Ingrese un telefono válido</p>
+            <div class="spaceForm">
+                <img src="./../../../assets/icons/email.svg" alt="email">
+                <input type="email" name="email" id="email" placeholder="Email" [(ngModel)]="profile.email"
+                    #email="ngModel" required minlength="5">
+            </div>
+            <p class="invalid" *ngIf="email.invalid && email.touched">Ingrese un email válido</p>
+            <div class="spaceForm">
+                <img src="./../../../assets/icons/notes.svg" alt="detalles">
+                <input type="text" name="details" id="details" placeholder="Detalles"
+                    [(ngModel)]="profile.deliveryDetails" #details="ngModel">
+            </div>
+            <button [disabled]="form.invalid">Guardar</button>
+        </form>
+    </div>
 </section>

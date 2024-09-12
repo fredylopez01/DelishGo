@@ -49,3 +49,12 @@ h1{
         opacity: 0%;
     }
 }
+@media screen and (min-width:600px){
+    header{
+        height: 70px;
+        border-radius: 0;
+    }
+    .large{
+        height: 70px;
+    }
+}

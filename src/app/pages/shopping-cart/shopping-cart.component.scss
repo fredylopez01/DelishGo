@@ -5,10 +5,11 @@
     display: flex;
     flex-direction: column;
     justify-items: center;
+    align-items: center;
     gap: 10px 0;
 }
 .productCard{
-    width: 100%;
+    width: 350px;
     height: 90px;
     display: flex;
     border-radius: variables.$border-radius-small;
@@ -117,10 +118,14 @@ button{
 }
 #buttonsContainer{
     margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 #btnCopy,
 #btnMessage{
-    width: 100%;
+    width: 350px;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -182,7 +187,7 @@ dialog{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 75vh;
+    height: 95%;
     margin: 20px;
     gap: 15px;
     background-color: variables.$productCardColor;
@@ -201,4 +206,30 @@ dialog{
 #imgCart{
     font-size: 30vh;
     color: variables.$colorFontButtonCar;
+}
+@media screen and (min-width:950px) {
+    #mainContainer{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        height: 100%;
+        background-color: #f1f0d1b7;
+    }
+    .containerProducts{
+        grid-column: 1;
+        overflow-y: scroll;
+        scroll-behavior: auto;
+    }
+    .containerProducts::-webkit-scrollbar {
+        display: none;
+    }
+    .productCard{
+        width: 450px;
+    }
+    #containerMidle{
+        grid-column: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: variables.$titleColor;
+    }
 }

@@ -1,21 +1,22 @@
 @use "./../../../assets/styles/variables.scss";
 
 .body{
-    margin: 20px;
+    gap: 18px 0;
+    height: 100%;
 }
 #imgUser{
     width: 130px;
     aspect-ratio: 1;
 }
-.body, form{
+.body,
+#containerInBody, 
+form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     justify-items: center;
     align-items: center;
     gap: 16px 0;
-}
-.body{
-    gap: 18px 0;
 }
 .spaceForm{
     display: flex;
@@ -56,5 +57,17 @@ button{
     cursor: pointer;
     &:disabled{
         background-color: variables.$buttonSaveDisabled;
+    }
+}
+@media screen and (min-width:700px) {
+    .body{
+        background-image: linear-gradient(120deg, #f0fafd81 0%, #d2e3f170 100%), url(./../../../assets/images/background.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    #containerInBody{
+        background-color: #e7e7e7ee;
+        padding: 20px;
+        border-radius: variables.$border-radius-medium;
     }
 }
