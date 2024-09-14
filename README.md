@@ -15,6 +15,12 @@ Abra la carpeta donde se encuentra el proyecto mediante la terminal y ejecute `n
  
 Luego abra el navegador y ponga la siguiente dirección `http://localhost:4200/`. La aplicación se recargará automáticamente si cambia alguno de los archivos fuente.
 
+## Icono de la apliación web
+
+![](./src/favicon.ico)
+
+Créditos: [App icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/app)
+
 ## Screens
 
 ### Screen del home o página de inicio
