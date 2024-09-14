@@ -38,9 +38,14 @@ textarea{
     border-radius: variables.$border-radius-medium;
     border: unset;
     background: variables.$backgroundNotes;
-    width: 100%;
     margin-top: 5px;
     resize: none;
+    width: calc(100% - 30px);
+    padding: 15px;
+    &:focus{
+        outline: none;
+    }
+    font-family: Arial, Helvetica, sans-serif;
 }
 .amountContainer{
     display: flex;
