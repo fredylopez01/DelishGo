@@ -1,6 +1,5 @@
-# ProjectFoodAngular
+# DelishGo
 
-## Descipción
 Este es un proyecto que modela el funcionamiento de una aplicación de comidas con pedidos a domicilio mediante whatsapp. Cuenta con página de productos o home, página de busqueda, página para el carrito y además cuenta con una página del perfil del usuario.
 Fue desarrollado con la ayuda y guía de [Calo](https://github.com/cacalo) del canal de YouTube [PuntoJson](https://www.youtube.com/@puntojson).
 
